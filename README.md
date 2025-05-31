@@ -2,6 +2,8 @@
 
 Welcome! This repository contains the projects and tasks completed during my Python Programming Internship at **CodeAlpha** from **1st June 2025 to 30th June 2025**.
 
+<img src="image.jpg" alt="Logo">
+
 ## 👨‍💻 Intern Details
 
 - **Name:** Mark Chindudzi  
