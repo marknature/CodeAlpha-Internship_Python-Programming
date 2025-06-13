@@ -59,3 +59,9 @@ def calculate_portfolio_value():
         except Exception as e:
             print(f"Error saving to file: {e}")
 
+
+if __name__ == "__main__":
+    calculate_portfolio_value()
+
+# This code calculates the total investment value of a stock portfolio based on user input and hardcoded stock prices.
+# It allows the user to input stock names and quantities, calculates the total value, and optionally saves it to a file.
