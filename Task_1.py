@@ -52,4 +52,7 @@ while attempts_left > 0:
 
 # If player runs out of attempts
 if attempts_left == 0:
-    print("\nGame Over! The word was:", word_to_guess)
+    print("\nGame Over! The word was:", word_to_guess) # Game over message
+    print("Better luck next time!")
+
+    
