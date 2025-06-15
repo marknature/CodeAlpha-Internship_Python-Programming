@@ -26,7 +26,7 @@ if __name__ == "__main__":
         if not os.path.exists(destination_folder):
             print(f"Destination folder '{destination_folder}' does not exist. It will be created.")
     move_jpg_files(source_folder, destination_folder)
-    
+  
 # This script moves all .jpg files from a specified source folder to a specified destination folder.
 # Ensure that the source folder exists and contains .jpg files before running the script.
 # The script creates the destination folder if it does not exist. 
@@ -68,3 +68,28 @@ if __name__ == "__main__":
 
 
 # Idea 3 - Rename files in a directory by adding a prefix
+def rename_files_with_prefix(directory, prefix):
+    """
+    Renames all files in a directory by adding a specified prefix.
+
+    Args:
+        directory (str): The path to the directory containing files to rename.
+        prefix (str): The prefix to add to each file name.
+    """
+    if not os.path.exists(directory):
+        print(f"Error: Directory '{directory}' does not exist.")
+        return
+
+    for filename in os.listdir(directory):
+        if os.path.isfile(os.path.join(directory, filename)):
+            new_name = prefix + filename
+            old_path = os.path.join(directory, filename)
+            new_path = os.path.join(directory, new_name)
+            os.rename(old_path, new_path)
+            print(f"Renamed '{filename}' to '{new_name}'")
+
+if __name__ == "__main__":
+    directory = input("Enter the directory path e.g. 'my_directory' ")
+    prefix = input("Enter the prefix to add to each file name e.g. 'prefix_' ")
+    rename_files_with_prefix(directory, prefix)
+
