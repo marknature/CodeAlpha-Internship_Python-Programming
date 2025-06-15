@@ -18,8 +18,13 @@ def move_jpg_files(source_folder, destination_folder):
             print(f"Moved {filename} to {destination_folder}")
 
 if __name__ == "__main__":
-    source_folder = "source_images"  # Replace with your source folder
-    destination_folder = "jpg_images"  # Replace with your destination folder
+    source_folder = input("Enter source folder path e.g. 'source_folder' ")
+    destination_folder = input("Enter destination folder path e.g. 'destination_folder' ")
+    if not os.path.exists(source_folder):
+        print(f"Error: Source folder '{source_folder}' does not exist.")
+    else:
+        if not os.path.exists(destination_folder):
+            print(f"Destination folder '{destination_folder}' does not exist. It will be created.")
     move_jpg_files(source_folder, destination_folder)
     
 # This script moves all .jpg files from a specified source folder to a specified destination folder.
