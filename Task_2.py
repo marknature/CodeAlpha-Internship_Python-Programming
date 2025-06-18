@@ -31,7 +31,10 @@ def calculate_portfolio_value():
             except ValueError:
                 print("Invalid input. Please enter a valid integer for quantity.")
 
-        portfolio[stock_name] = quantity
+        portfolio[stock_name] = quantity # Add stock and quantity to portfolio
+    if not portfolio:
+        print("No stocks added to portfolio.")
+        return
 
     total_value = 0
     print("\nPortfolio:")
@@ -62,6 +65,7 @@ def calculate_portfolio_value():
 
 if __name__ == "__main__":
     calculate_portfolio_value()
+
 
 # This code calculates the total investment value of a stock portfolio based on user input and hardcoded stock prices.
 # It allows the user to input stock names and quantities, calculates the total value, and optionally saves it to a file.
