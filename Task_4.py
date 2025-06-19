@@ -1,4 +1,9 @@
 import csv
+"""
+Basic Chatbot using predefined responses from a CSV file
+This chatbot reads predefined responses from a CSV file and responds to user input.
+The CSV file should have two columns: 'sender' and 'message'.
+"""
 
 # Load chat data from CSV
 chat_data = {}
@@ -16,7 +21,7 @@ with open("Basic Chatbot(pedefined responses).csv", mode='r', encoding='utf-8') 
 
 # Chatbot logic
 def basic_chatbot():
-    print("Chatbot: Hello, I'm Kev! A chatbot powered by a csv file with predefined and limited responses."/n+"Type 'bye' to exit.")
+    print("Chatbot: Hello, I'm Kev! A chatbot powered by a csv file with predefined and limited responses. Type 'bye' to exit.")
     while True:
         user_input = input("You: ").strip().lower()
         if user_input == "bye":
