@@ -14,4 +14,16 @@ with open("Basic Chatbot(pedefined responses).csv", mode='r', encoding='utf-8') 
                 chat_data[previous_user_message] = message.strip()
             previous_user_message = None
 
+# Chatbot logic
+def csv_chatbot():
+    print("Chatbot: Hello! Type 'bye' to exit.")
+    while True:
+        user_input = input("You: ").strip().lower()
+        if user_input == "bye":
+            print("Chatbot: Goodbye!")
+            break
+        response = chat_data.get(user_input, "I don't understand.")
+        print(f"Chatbot: {response}")
 
+# Run the chatbot
+csv_chatbot()
