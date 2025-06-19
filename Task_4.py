@@ -16,7 +16,7 @@ with open("Basic Chatbot(pedefined responses).csv", mode='r', encoding='utf-8') 
 
 # Chatbot logic
 def basic_chatbot():
-    print("Chatbot: Hello, I'm Kev! A chatbot powered by a csv file with predefined and limited responses."/n "Type 'bye' to exit.")
+    print("Chatbot: Hello, I'm Kev! A chatbot powered by a csv file with predefined and limited responses."/n+"Type 'bye' to exit.")
     while True:
         user_input = input("You: ").strip().lower()
         if user_input == "bye":
